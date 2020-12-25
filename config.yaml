@@ -142,8 +142,7 @@ homebrew_installed_packages:
   - corretto8
   - corretto11
 
-homebrew_cask_apps:
-  
+homebrew_cask_apps: []
 
 osx_script: "~/.macos --no-restart"
 
