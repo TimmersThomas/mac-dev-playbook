@@ -35,14 +35,10 @@ dotfiles_repo_local_destination: ~/Workspace/_Personal/dotfiles
 homebrew_cask_apps: []
 homebrew_installed_packages: 
   - 
-    install_options: with-default-names
-    name: gnu-sed
-  - 
-    install_options: with-webp
-    name: imagemagick
-  - 
     install_options: with-iri
     name: wget
+  - gnu-sed
+  - imagemagick
   - ack
   - aircrack-ng
   - aws-cdk
