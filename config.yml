@@ -95,46 +95,88 @@ homebrew_installed_packages:
   - woff2
   - yarn
   - zopfli
-  - 1password
-  - 1password-cli
-  - alfred
-  - amazon-chime
-  - adobe-creative-cloud
-  - adobe-creative-cloud-cleaner-tool
-  - dropbox
-  - balenaetcher
-  - caffeine
-  - cyberduck
-  - docker
-  - docker-compose
-  - evernote
-  - firefox
-  - github
-  - google-chrome
-  - home-assistant
-  - jetbrains-toolbox
-  - macdown
-  - microsoft-teams
-  - notion
-  - postman
-  - sketch
-  - skype
-  - slack
-  - sourcetree
-  - spotify
-  - steam
-  - sublime-text
-  - teamviewer-quickjoin
-  - divvy
-  - the-unarchiver
-  - transmission
-  - tunnelblick
-  - visual-studio-code
-  - open-in-code
-  - vlc
-  - corretto
-  - corretto8
-  - corretto11
+
+  # APS
+  - install_options: cask
+    name: 1password
+  - install_options: cask
+    name: 1password-cli
+  - install_options: cask
+    name: alfred
+  - install_options: cask
+    name: amazon-chime
+  - install_options: cask
+    name: adobe-creative-cloud
+  - install_options: cask
+    name: adobe-creative-cloud-cleaner-tool
+  - install_options: cask
+    name: dropbox
+  - install_options: cask
+    name: balenaetcher
+  - install_options: cask
+    name: caffeine
+  - install_options: cask
+    name: cyberduck
+  - install_options: cask
+    name: docker
+  - install_options: cask
+    name: docker-compose
+  - install_options: cask
+    name: evernote
+  - install_options: cask
+    name: firefox
+  - install_options: cask
+    name: github
+  - install_options: cask
+    name: google-chrome
+  - install_options: cask
+    name: home-assistant
+  - install_options: cask
+    name: jetbrains-toolbox
+  - install_options: cask
+    name: macdown
+  - install_options: cask
+    name: microsoft-teams
+  - install_options: cask
+    name: notion
+  - install_options: cask
+    name: postman
+  - install_options: cask
+    name: sketch
+  - install_options: cask
+    name: skype
+  - install_options: cask
+    name: slack
+  - install_options: cask
+    name: sourcetree
+  - install_options: cask
+    name: spotify
+  - install_options: cask
+    name: steam
+  - install_options: cask
+    name: sublime-text
+  - install_options: cask
+    name: teamviewer-quickjoin
+  - install_options: cask
+    name: divvy
+  - install_options: cask
+    name: the-unarchiver
+  - install_options: cask
+    name: transmission
+  - install_options: cask
+    name: tunnelblick
+  - install_options: cask
+    name: visual-studio-code
+  - install_options: cask
+    name: open-in-code
+  - install_options: cask
+    name: vlc
+  - install_options: cask
+    name: corretto
+  - install_options: cask
+    name: corretto8
+  - install_options: cask
+    name: corretto11
 homebrew_taps: 
   - homebrew/core
   - homebrew/cask
