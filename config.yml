@@ -59,7 +59,6 @@ homebrew_installed_packages:
   - gmp
   - gnupg
   - gradle
-  - gradle-completion
   - grep
   - hashpump
   - hydra
@@ -142,7 +141,7 @@ homebrew_taps:
   - homebrew/cask
   - homebrew/cask-versions
   - bramstein/webfonttools
-npm_package: 
+npm_packages: 
   - 
     name: artillery
   - 
@@ -183,5 +182,6 @@ post_provision_tasks:
       dest: /Users/timmersthomas/
       rsync_opts: 
         - "--hvaHEPRS"
+        - "--prune-empty-dirs"
       src: "/Volumes/Extreme SSD/backup_content/"
     name: "Synchronize passing in extra rsync options"
