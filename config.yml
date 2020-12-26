@@ -25,10 +25,7 @@ dotfiles_files:
   - .tmux.conf
   - .vimrc
   - .wgetrc
-  - init/Preferences.sublime-settings
-  - "init/Solarized Dark xterm-256color.terminal"
-  - "init/Solarized Dark.itermcolors"
-  - init/spectacle.json
+  - .dotfiles_assets
 dotfiles_repo: "https://github.com/TimmersThomas/dotfiles.git"
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Workspace/_Personal/dotfiles
