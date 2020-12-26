@@ -1,9 +1,5 @@
----
-dotfiles_repo: https://github.com/TimmersThomas/dotfiles.git
-dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Workspace/_Personal/dotfiles
-
-dotfiles_files:
+--- 
+dotfiles_files: 
   - .aliases
   - .aliases_clients
   - .bash_profile
@@ -30,30 +26,33 @@ dotfiles_files:
   - .vimrc
   - .wgetrc
   - init/Preferences.sublime-settings
-  - init/Solarized Dark xterm-256color.terminal
-  - init/Solarized Dark.itermcolors
+  - "init/Solarized Dark xterm-256color.terminal"
+  - "init/Solarized Dark.itermcolors"
   - init/spectacle.json
-
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-  - homebrew/cask-versions
-  - bramstein/webfonttools
-  
-homebrew_installed_packages:
-  - { name: gnu-sed, install_options: "with-default-names" }
-  - { name: imagemagick, install_options: "with-webp" }
-  - { name: wget, install_options: "with-iri" }
+dotfiles_repo: "https://github.com/TimmersThomas/dotfiles.git"
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Workspace/_Personal/dotfiles
+homebrew_cask_apps: []
+homebrew_installed_packages: 
+  - 
+    install_options: with-default-names
+    name: gnu-sed
+  - 
+    install_options: with-webp
+    name: imagemagick
+  - 
+    install_options: with-iri
+    name: wget
   - ack
   - aircrack-ng
-  - aws-cdk	
-  - aws-cfn-tools	
+  - aws-cdk
+  - aws-cfn-tools
   - awscli
-  - awsume	
+  - awsume
   - bash
   - bash-completion2
   - bfg
-  - cfn-lint	
+  - cfn-lint
   - dns2tcp
   - dnsmasq
   - fcrackzip
@@ -63,24 +62,24 @@ homebrew_installed_packages:
   - git-lfs
   - gmp
   - gnupg
-  - gradle	
-  - gradle-completion	
+  - gradle
+  - gradle-completion
   - grep
   - hashpump
   - hydra
   - john
   - maven
-  - maven-completion	
-  - maven@3.2	
+  - maven-completion
+  - maven@3.2
   - maven@3.3
   - moreutils
   - nmap
   - nvm
   - openssh
-  - parquet-tools	
+  - parquet-tools
   - pigz
   - pv
-  - pyenv	
+  - pyenv
   - python@3.9
   - rename
   - rlwrap
@@ -96,12 +95,10 @@ homebrew_installed_packages:
   - tcptrace
   - tree
   - ucspi-tcp
-  - webp	
+  - webp
   - woff2
-  - yarn	
+  - yarn
   - zopfli
-
-  # apps
   - 1password
   - 1password-cli
   - alfred
@@ -142,35 +139,51 @@ homebrew_installed_packages:
   - corretto
   - corretto8
   - corretto11
-
-homebrew_cask_apps: []
-
+homebrew_taps: 
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-versions
+  - bramstein/webfonttools
+npm_package: 
+  - 
+    name: artillery
+  - 
+    name: depcheck
+  - 
+    name: http-server
+  - 
+    name: npm-check-updates
 osx_script: "~/.macos --no-restart"
-
-npm_package:
-  - name: artillery
-  - name: depcheck
-  - name: http-server
-  - name: npm-check-updates
-
-pip_packages:
-  - name: aws-gate
-  - name: aws-mfa
-  - name: boto3
-  - name: botocore
-  - name: broadlink
-  - name: diagrams
-  - name: graphviz
-  - name: Jinja2
-  - name: PyYAML
-  - name: requests
-  - name: s3transfer
-  - name: toml
-
-post_provision_tasks:
-  - name: Synchronize passing in extra rsync options
-    ansible.posix.synchronize:
-      src: /Volumes/Extreme SSD/backup_content/
+pip_packages: 
+  - 
+    name: aws-gate
+  - 
+    name: aws-mfa
+  - 
+    name: boto3
+  - 
+    name: botocore
+  - 
+    name: broadlink
+  - 
+    name: diagrams
+  - 
+    name: graphviz
+  - 
+    name: Jinja2
+  - 
+    name: PyYAML
+  - 
+    name: requests
+  - 
+    name: s3transfer
+  - 
+    name: toml
+post_provision_tasks: 
+  - 
+    ansible.posix.synchronize: 
       dest: /Users/timmersthomas/
-      rsync_opts:
+      rsync_opts: 
         - "--hvaHEPRS"
+      src: "/Volumes/Extreme SSD/backup_content/"
+    name: "Synchronize passing in extra rsync options"
