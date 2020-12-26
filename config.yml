@@ -1,0 +1,176 @@
+---
+dotfiles_repo: https://github.com/TimmersThomas/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Workspace/_Personal/dotfiles
+
+dotfiles_files:
+  - .aliases
+  - .aliases_clients
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .curlrc
+  - .editorconfig
+  - .exports
+  - .exports_clients
+  - .functions
+  - .gdbinit
+  - .git
+  - .gitattributes
+  - .gitconfig
+  - .gitignore
+  - .gvimrc
+  - .hgignore
+  - .hushlogin
+  - .inputrc
+  - .macos
+  - .osx
+  - .screenrc
+  - .tmux.conf
+  - .vimrc
+  - .wgetrc
+  - init/Preferences.sublime-settings
+  - init/Solarized Dark xterm-256color.terminal
+  - init/Solarized Dark.itermcolors
+  - init/spectacle.json
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-versions
+  - bramstein/webfonttools
+  
+homebrew_installed_packages:
+  - { name: gnu-sed, install_options: "with-default-names" }
+  - { name: imagemagick, install_options: "with-webp" }
+  - { name: wget, install_options: "with-iri" }
+  - ack
+  - aircrack-ng
+  - aws-cdk	
+  - aws-cfn-tools	
+  - awscli
+  - awsume	
+  - bash
+  - bash-completion2
+  - bfg
+  - cfn-lint	
+  - dns2tcp
+  - dnsmasq
+  - fcrackzip
+  - findutils
+  - git
+  - git-flow
+  - git-lfs
+  - gmp
+  - gnupg
+  - gradle	
+  - gradle-completion	
+  - grep
+  - hashpump
+  - hydra
+  - john
+  - maven
+  - maven-completion	
+  - maven@3.2	
+  - maven@3.3
+  - moreutils
+  - nmap
+  - nvm
+  - openssh
+  - parquet-tools	
+  - pigz
+  - pv
+  - pyenv	
+  - python@3.9
+  - rename
+  - rlwrap
+  - s3cmd
+  - screen
+  - sfnt2woff
+  - sfnt2woff-zopfli
+  - socat
+  - sqlmap
+  - ssh-copy-id
+  - tcpflow
+  - tcpreplay
+  - tcptrace
+  - tree
+  - ucspi-tcp
+  - webp	
+  - woff2
+  - yarn	
+  - zopfli
+
+  # apps
+  - 1password
+  - 1password-cli
+  - alfred
+  - amazon-chime
+  - adobe-creative-cloud
+  - adobe-creative-cloud-cleaner-tool
+  - dropbox
+  - balenaetcher
+  - caffeine
+  - cyberduck
+  - docker
+  - docker-compose
+  - evernote
+  - firefox
+  - github
+  - google-chrome
+  - home-assistant
+  - jetbrains-toolbox
+  - macdown
+  - microsoft-teams
+  - notion
+  - postman
+  - sketch
+  - skype
+  - slack
+  - sourcetree
+  - spotify
+  - steam
+  - sublime-text
+  - teamviewer-quickjoin
+  - divvy
+  - the-unarchiver
+  - transmission
+  - tunnelblick
+  - visual-studio-code
+  - open-in-code
+  - vlc
+  - corretto
+  - corretto8
+  - corretto11
+
+homebrew_cask_apps: []
+
+osx_script: "~/.macos --no-restart"
+
+npm_package:
+  - name: artillery
+  - name: depcheck
+  - name: http-server
+  - name: npm-check-updates
+
+pip_packages:
+  - name: aws-gate
+  - name: aws-mfa
+  - name: boto3
+  - name: botocore
+  - name: broadlink
+  - name: diagrams
+  - name: graphviz
+  - name: Jinja2
+  - name: PyYAML
+  - name: requests
+  - name: s3transfer
+  - name: toml
+
+post_provision_tasks:
+  - name: Synchronize passing in extra rsync options
+    ansible.posix.synchronize:
+      src: /Volumes/Extreme SSD/backup_content/
+      dest: /Users/timmersthomas/
+      rsync_opts:
+        - "--hvaHEPRS"
