@@ -71,7 +71,7 @@ homebrew_installed_packages:
   - parquet-tools
   - pigz
   - pv
-  - pyenv
+  - virtualenv
   - python@3.9
   - rename
   - rlwrap
@@ -91,6 +91,8 @@ homebrew_installed_packages:
   - woff2
   - yarn
   - zopfli
+  - zsh-history-substring-search
+  
 
   # APS
   - 1password

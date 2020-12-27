@@ -22,6 +22,9 @@
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
     executable: "{{ item.executable | default(omit) }}"
+    virtualenv_command: "virtualenv"
+    virtualenv_python: "python3.9"
+    virtualenv_site_packages: true
   with_items: "{{ pip_packages }}"
 
 - name: Install global Ruby gems.
