@@ -71,7 +71,6 @@ homebrew_installed_packages:
   - parquet-tools
   - pigz
   - pv
-  - virtualenv
   - python@3.9
   - rename
   - rlwrap
